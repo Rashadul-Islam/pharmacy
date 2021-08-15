@@ -1,0 +1,25 @@
+.footer {
+  width: 100%;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 0px;
+}
+
+.footer_link {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+.footer_link:hover {
+  color: coral;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .footer {
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    bottom: 0px;
+  }
+}

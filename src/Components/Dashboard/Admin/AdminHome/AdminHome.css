@@ -1,0 +1,26 @@
+.responsive {
+    width: 75%;
+}
+
+#background{
+    min-height: 100vh;
+    height: 100%;
+    background-color: rgba(159, 209, 120, 0.897);
+}
+
+.cursor :hover {
+    cursor: pointer;
+}
+
+@media (min-width:1025px) {
+    .responsive {
+        width: 50%;
+    }
+}
+
+@media (min-width:320px) {
+    .responsive {
+        margin-top: 8%;
+        padding-top: 0;
+    }
+}

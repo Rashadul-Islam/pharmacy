@@ -1,0 +1,106 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25;
+}
+
+.print {
+    width: 80%;
+}
+
+.selling_info {
+    width: 75%;
+}
+
+#voucher_table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 10px;
+    padding: 0;
+    width: 80%;
+    table-layout: fixed;
+    box-shadow: 2px 5px 4px rgb(68, 63, 63);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#voucher_table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+#voucher_table tr {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+#voucher_table th, #voucher_table td {
+    padding: .625em;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#voucher_table th {
+    background-color: white;
+    color: black;
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+@page {
+    size: auto;
+    margin: 0mm;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #print * {
+        visibility: visible;
+    }
+    #print {
+        position: absolute;
+        left: 0;
+        top: 5%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #voucher_table {
+        border: 0;
+        width: 95%;
+    }
+    .print {
+        width: 95%;
+    }
+    .selling_info {
+        width: 90%;
+    }
+    #voucher_table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    #voucher_table tr {
+        display: block;
+        margin-bottom: .625em;
+    }
+    #voucher_table td {
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+    #voucher_table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
