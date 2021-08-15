@@ -11,7 +11,7 @@ const ManageMember = () => {
     const [allUser, setAllUser] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/alluser')
+        fetch('https://dry-headland-65168.herokuapp.com/alluser')
             .then(res => res.json())
             .then(data => setAllUser(data))
     }, [allUser])
@@ -27,7 +27,7 @@ const ManageMember = () => {
             alert("Don't loose your administrative power...!!!");
         }
         else {
-            fetch(`http://localhost:5000/users/delete/${id}`, {
+            fetch(`https://dry-headland-65168.herokuapp.com/users/delete/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

@@ -12,7 +12,7 @@ const ManageMedicine = () => {
     const [allMedicine, setAllMedicine] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/medicines")
+        fetch("https://dry-headland-65168.herokuapp.com/medicines")
             .then(res => res.json())
             .then(data => setAllMedicine(data))
     }, [allMedicine])
@@ -28,7 +28,7 @@ const ManageMedicine = () => {
 
     //delete medicine
     const handleDelete = id => {
-        fetch(`http://localhost:5000/medicines/delete/${id}`, {
+        fetch(`https://dry-headland-65168.herokuapp.com/medicines/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

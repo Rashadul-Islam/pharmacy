@@ -24,7 +24,7 @@ const AddMedicine = () => {
         e.preventDefault();
         if (medicineByName === null) {
             const medicineInfo = { ...medicine };
-            const url = "http://localhost:5000/addMedicine"
+            const url = "https://dry-headland-65168.herokuapp.com/addMedicine"
             fetch(url, {
                 method: "POST",
                 headers: {
@@ -46,7 +46,7 @@ const AddMedicine = () => {
     }
     useEffect(() => {
         if (medicine.genericName !== '') {
-            fetch(`http://localhost:5000/medicine/${medicine.genericName}`)
+            fetch(`https://dry-headland-65168.herokuapp.com/medicine/${medicine.genericName}`)
                 .then(res => res.json())
                 .then(data => SetMedicineByName(data))
                 .catch(err => SetMedicineByName(null))

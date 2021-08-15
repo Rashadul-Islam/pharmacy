@@ -19,7 +19,7 @@ const Report = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:5000/report/${blur.start}/${blur.end}`)
+        fetch(`https://dry-headland-65168.herokuapp.com/report/${blur.start}/${blur.end}`)
             .then(response => response.json())
             .then(data => setData(data))
         document.getElementById("form-div").reset();

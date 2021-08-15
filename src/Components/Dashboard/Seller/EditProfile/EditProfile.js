@@ -17,7 +17,7 @@ const EditProfile = () => {
     });
     useEffect(() => {
         const id = sessionStorage.getItem("Id");
-        fetch(`http://localhost:5000/user/${id}`)
+        fetch(`https://dry-headland-65168.herokuapp.com/user/${id}`)
             .then(res => res.json())
             .then(data => setStore(data))
     }, [setStore])
@@ -44,7 +44,7 @@ const EditProfile = () => {
                 role: user.role === "" ? store.role : user.role,
             }
             const id = sessionStorage.getItem("Id");
-            fetch(`http://localhost:5000/user/update/${id}`, {
+            fetch(`https://dry-headland-65168.herokuapp.com/user/update/${id}`, {
                 method: 'PATCH',
                 headers: { 'content-Type': 'application/json' },
                 body: JSON.stringify(updateUser)

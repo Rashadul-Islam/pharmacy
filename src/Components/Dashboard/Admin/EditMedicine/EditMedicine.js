@@ -21,7 +21,7 @@ const EditMedicine = () => {
 
     useEffect(() => {
         const id = sessionStorage.getItem("edit");
-        fetch(`http://localhost:5000/medicines/${id}`)
+        fetch(`https://dry-headland-65168.herokuapp.com/medicines/${id}`)
             .then(res => res.json())
             .then(data => setStore(data))
     }, [setStore])
@@ -53,7 +53,7 @@ const EditMedicine = () => {
             }
             const id = sessionStorage.getItem("edit");
             if (JSON.stringify(medicine) !== JSON.stringify(updateMedicine)) {
-                fetch(`http://localhost:5000/medicine/update/${id}`, {
+                fetch(`https://dry-headland-65168.herokuapp.com/medicine/update/${id}`, {
                     method: 'PATCH',
                     headers: { 'content-Type': 'application/json' },
                     body: JSON.stringify(updateMedicine)

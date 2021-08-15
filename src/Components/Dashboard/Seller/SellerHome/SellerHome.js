@@ -14,13 +14,13 @@ const SellerHome = () => {
     const [sells, setSells] = useState({});
 
     useEffect(() => {
-        fetch('http://localhost:5000/alluser')
+        fetch('https://dry-headland-65168.herokuapp.com/alluser')
             .then(res => res.json())
             .then(data => setUser(data))
     }, [user])
 
     useEffect(() => {
-        fetch("http://localhost:5000/medicines")
+        fetch("https://dry-headland-65168.herokuapp.com/medicines")
             .then(res => res.json())
             .then(data => setAllMedicine(data))
     }, [allMedicine])
@@ -28,7 +28,7 @@ const SellerHome = () => {
 
     useEffect(() => {
         const date = currentDate();
-        fetch(`http://localhost:5000/${date}`)
+        fetch(`https://dry-headland-65168.herokuapp.com/${date}`)
             .then(res => res.json())
             .then(data => setSells(data))
     }, [sells])

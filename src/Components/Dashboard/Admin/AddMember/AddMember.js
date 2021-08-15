@@ -20,7 +20,7 @@ const AddMember = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const newUser = { ...userInfo };
-        const url = "http://localhost:5000/addMember"
+        const url = "https://dry-headland-65168.herokuapp.com/addMember"
         fetch(url, {
             method: "POST",
             headers: {

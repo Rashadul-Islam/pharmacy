@@ -26,7 +26,7 @@ const Login = () => {
     const [users, setUsers] = useState([]);
     useEffect(() => {
         if (userInfo.Email !== '') {
-            fetch(`http://localhost:5000/users/${userInfo.Email}`)
+            fetch(`https://dry-headland-65168.herokuapp.com/users/${userInfo.Email}`)
                 .then(res => res.json())
                 .then(data => setUsers(data))
                 .catch(err => setUsers(null))

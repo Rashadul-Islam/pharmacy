@@ -12,7 +12,7 @@ const SearchUser = () => {
 
     const search = searchInput === "" ? setSearchInput(sessionStorage.getItem('searchUser')) : searchInput;
     useEffect(() => {
-        fetch('http://localhost:5000/userSearch?search=' + search)
+        fetch('https://dry-headland-65168.herokuapp.com/userSearch?search=' + search)
             .then(res => res.json())
             .then(data => setSearchResult(data))
             .catch(err => setSearchResult([]))
@@ -33,7 +33,7 @@ const SearchUser = () => {
 
     //delete medicine
     const handleDelete = id => {
-        fetch(`http://localhost:5000/users/delete/${id}`, {
+        fetch(`https://dry-headland-65168.herokuapp.com/users/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

@@ -36,7 +36,7 @@ const SellMedicine = () => {
 
     useEffect(() => {
         if (input !== "") {
-            fetch('http://localhost:5000/medicineSearch?search=' + input)
+            fetch('https://dry-headland-65168.herokuapp.com/medicineSearch?search=' + input)
                 .then(res => res.json())
                 .then(data => setResult(data))
         }
@@ -44,7 +44,7 @@ const SellMedicine = () => {
 
     useEffect(() => {
         if (blurData.genericName !== '') {
-            fetch(`http://localhost:5000/medicine/${blurData.genericName}`)
+            fetch(`https://dry-headland-65168.herokuapp.com/medicine/${blurData.genericName}`)
                 .then(res => res.json())
                 .then(data => setStoreData(data))
         }
@@ -137,7 +137,7 @@ const SellMedicine = () => {
             totalSell: total.totalSell,
             totalProfit: total.totalProfit
         }
-        const url = "http://localhost:5000/addSell"
+        const url = "https://dry-headland-65168.herokuapp.com/addSell"
         fetch(url, {
             method: "POST",
             headers: {
@@ -158,7 +158,7 @@ const SellMedicine = () => {
         if (addMedicine.length > 0) {
             for (let i = 0; i < addMedicine.length; i++) {
                 let updateMedicine = { quantity: addMedicine[i].quantity - addMedicine[i].sellQuantity }
-                fetch(`http://localhost:5000/medicine/reduce/${addMedicine[i]._id}`, {
+                fetch(`https://dry-headland-65168.herokuapp.com/medicine/reduce/${addMedicine[i]._id}`, {
                     method: 'PATCH',
                     headers: { 'content-Type': 'application/json' },
                     body: JSON.stringify(updateMedicine)

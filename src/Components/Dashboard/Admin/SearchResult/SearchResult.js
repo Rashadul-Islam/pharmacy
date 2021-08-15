@@ -12,7 +12,7 @@ const SearchResult = () => {
 
     const search = searchInput === "" ? setSearchInput(sessionStorage.getItem('result')) : searchInput;
     useEffect(() => {
-        fetch('http://localhost:5000/medicineSearch?search=' + search)
+        fetch('https://dry-headland-65168.herokuapp.com/medicineSearch?search=' + search)
             .then(res => res.json())
             .then(data => setSearchResult(data))
             .catch(err => setSearchResult([]))
@@ -33,7 +33,7 @@ const SearchResult = () => {
 
     //delete medicine
     const handleDelete = id => {
-        fetch(`http://localhost:5000/medicines/delete/${id}`, {
+        fetch(`https://dry-headland-65168.herokuapp.com/medicines/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
