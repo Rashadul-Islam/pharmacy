@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import { useHistory } from 'react-router-dom';
-import { useState } from 'react/cjs/react.development';
 import UserSideBar from '../../SideBar/UserSideBar';
 import "./SellerHome.css";
 
@@ -73,11 +72,11 @@ const SellerHome = () => {
                     <h1><FaIcons.FaCapsules /></h1>
                     <p><strong>Total Medicine: {allMedicine.length}</strong></p>
                 </div>
-                <div onClick={() => handleClick('sellMedicine')} className=" cursor card card_login d-flex justify-content-center align-items-center col-md-4 position-static p-4 m-4" style={{ width: '12rem' }}>
+                <div onClick={() => handleClick("sellMedicine")} className=" cursor card card_login d-flex justify-content-center align-items-center col-md-4 position-static p-4 m-4" style={{ width: '12rem' }}>
                     <h1><FaIcons.FaCapsules /></h1>
                     <p><strong>Sell Medicine</strong></p>
                 </div>
-                <div onClick={() => handleClick('editProfile')} className="cursor card card_login d-flex justify-content-center align-items-center col-md-4 position-static p-4 m-4" style={{ width: '12rem' }}>
+                <div onClick={() => handleClick("editProfile")} className="cursor card card_login d-flex justify-content-center align-items-center col-md-4 position-static p-4 m-4" style={{ width: '12rem' }}>
                     <h1><FaIcons.FaEdit /></h1>
                     <p><strong>Edit Profile</strong></p>
                 </div>
