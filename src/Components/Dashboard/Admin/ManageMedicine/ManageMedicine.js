@@ -42,8 +42,7 @@ const ManageMedicine = () => {
     return (
         <div id="background">
             <UserSideBar></UserSideBar>
-            <h3 className="text-center pt-3"><strong>Manage Medicine</strong></h3>
-            <form onSubmit={handleSearch}><div className="input-group pt-2 d-flex justify-content-center position-static">
+            <form onSubmit={handleSearch}><div className="input-group pt-2 d-flex justify-content-center position-static pt-5">
                 <div className="form-outline">
                     <input type="text" id="searchValue" className="form-control" placeholder="search" required />
                 </div>

@@ -3,7 +3,7 @@ import * as FaIcons from 'react-icons/fa';
 import { useHistory } from 'react-router-dom';
 import { useState } from 'react/cjs/react.development';
 import UserSideBar from '../../SideBar/UserSideBar';
-import"./SellerHome.css";
+import "./SellerHome.css";
 
 const SellerHome = () => {
 
@@ -26,14 +26,6 @@ const SellerHome = () => {
     }, [allMedicine])
 
 
-    useEffect(() => {
-        const date = currentDate();
-        fetch(`https://dry-headland-65168.herokuapp.com/${date}`)
-            .then(res => res.json())
-            .then(data => setSells(data))
-    }, [sells])
-
-
     const currentDate = () => {
         const today = new Date();
         const day = String(today.getDate()).padStart(2, '0');
@@ -42,6 +34,14 @@ const SellerHome = () => {
         const current = year + '-' + month + '-' + day;
         return current;
     }
+
+    useEffect(() => {
+        const date = currentDate();
+        fetch(`https://dry-headland-65168.herokuapp.com/${date}`)
+            .then(res => res.json())
+            .then(data => setSells(data))
+    }, [sells])
+
 
     const total = () => {
         let sellTotal = 0;

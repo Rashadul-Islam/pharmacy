@@ -26,14 +26,6 @@ const AdminHome = () => {
     }, [allMedicine])
 
 
-    useEffect(() => {
-        const date = currentDate();
-        fetch(`https://dry-headland-65168.herokuapp.com/${date}`)
-            .then(res => res.json())
-            .then(data => setSells(data))
-    }, [sells])
-
-
     const currentDate = () => {
         const today = new Date();
         const day = String(today.getDate()).padStart(2, '0');
@@ -42,6 +34,13 @@ const AdminHome = () => {
         const current = year + '-' + month + '-' + day;
         return current;
     }
+
+    useEffect(() => {
+        const date = currentDate();
+        fetch(`https://dry-headland-65168.herokuapp.com/${date}`)
+            .then(res => res.json())
+            .then(data => setSells(data))
+    }, [sells])
 
     const total = () => {
         let sellTotal = 0;

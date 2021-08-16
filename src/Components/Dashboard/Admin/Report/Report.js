@@ -70,7 +70,7 @@ const Report = () => {
             <UserSideBar></UserSideBar>
             <div className="pt-5 mx-auto">
                 <div id="report">
-                    <h3 className="text-center pb-3"><strong>Sells Report</strong></h3>
+                    <h3 className="text-center"><strong>Sells Report</strong></h3>
                     <form id="form-div" onSubmit={handleSubmit}>
                         <div className="row">
                             <div className="form-group col-md-5 pb-3">
