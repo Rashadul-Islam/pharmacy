@@ -92,7 +92,7 @@ const Login = () => {
                 </div>
             </div>
             <div className='pt-4'>
-                <p className="text-center text-danger">{text}</p>
+                <p className="text-center text-warning">{text}</p>
             </div>
             <Footer></Footer>
         </div>
