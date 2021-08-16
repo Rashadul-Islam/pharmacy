@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import { useHistory } from 'react-router-dom';
-import { useState } from 'react/cjs/react.development';
 import UserSideBar from '../../SideBar/UserSideBar';
 
 const ManageMember = () => {
