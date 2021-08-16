@@ -9,9 +9,9 @@ const AdminHome = () => {
 
     const history = useHistory();
 
-    const [user, setUser] = useState({});
-    const [allMedicine, setAllMedicine] = useState({});
-    const [sells, setSells] = useState({});
+    const [user, setUser] = useState([]);
+    const [allMedicine, setAllMedicine] = useState([]);
+    const [sells, setSells] = useState([]);
 
     useEffect(() => {
         fetch('https://dry-headland-65168.herokuapp.com/alluser')
