@@ -1,4 +1,5 @@
 .responsive {
+    padding-top: 10%;
     width: 75%;
 }
 
@@ -12,13 +13,20 @@
     cursor: pointer;
 }
 
-@media (min-width:1025px) {
+@media (min-width: 1281px)  {
+    .responsive {
+        padding-top: 7%;
+        width: 50%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px)  {
     .responsive {
         width: 50%;
     }
 }
 
-@media (min-width:320px) {
+@media (min-width: 320px) and (max-width: 480px {
     .responsive {
         margin-top: 8%;
         padding-top: 0;

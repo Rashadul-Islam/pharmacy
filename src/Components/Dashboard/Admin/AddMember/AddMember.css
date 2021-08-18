@@ -1,0 +1,15 @@
+.form-style {
+    width: 25%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .form-style {
+        width: 45%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .form-style {
+        width: 90%;
+    }
+}

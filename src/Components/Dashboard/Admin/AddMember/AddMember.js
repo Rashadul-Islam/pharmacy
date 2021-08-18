@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import UserSideBar from '../../SideBar/UserSideBar';
 import * as IoIcons from 'react-icons/io';
+import "./AddMember.css";
 const AddMember = () => {
 
     const [userInfo, setUserInfo] = useState({
@@ -41,7 +42,7 @@ const AddMember = () => {
         <div id="background">
             <UserSideBar></UserSideBar>
             <div className="pt-4 mt-5 pb-4">
-                <div className="card mx-auto p-4 pb-5 mt-5 position-static card_login" style={{ width: "18rem" }}>
+                <div className="card card_login mx-auto p-4 pb-5 mt-5 position-static form-style">
                     <form id="myForm" onSubmit={handleSubmit}>
                         <h5 className="pt-4 text-center font-weight-bold pb-3">Add Member<span><IoIcons.IoMdPeople /></span></h5>
                         <input className="form-control" type="Email" onBlur={handleBlur} name="email" placeholder="Email" required />

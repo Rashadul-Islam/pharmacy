@@ -3,18 +3,46 @@ import UserSideBar from '../../SideBar/UserSideBar';
 import * as FaIcons from 'react-icons/fa';
 import "./ManageMedicine.css";
 import { useHistory } from 'react-router-dom';
+import _ from "lodash";
 
 const ManageMedicine = () => {
 
     const history = useHistory();
 
     const [allMedicine, setAllMedicine] = useState([]);
+    const [paginatedPost, setPaginatedPost] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
 
     useEffect(() => {
         fetch("https://dry-headland-65168.herokuapp.com/medicines")
             .then(res => res.json())
-            .then(data => setAllMedicine(data))
+            .then(data => {
+                setAllMedicine(data);
+            })
     }, [allMedicine])
+
+
+    useEffect(() => {
+        fetch("https://dry-headland-65168.herokuapp.com/medicines")
+            .then(res => res.json())
+            .then(data => {
+                setPaginatedPost(_(data).slice(0).take(pageSize).value());
+            })
+    }, [setPaginatedPost])
+
+    const pageSize = 10;
+    const pageCount = allMedicine ? Math.ceil(allMedicine.length / pageSize) : 0;
+    if (pageCount === 1) return null;
+    const pages = _.range(1, pageCount + 1);
+
+
+    const Pagination = (pageNo) => {
+        setCurrentPage(pageNo);
+        const startIndex = (pageNo - 1) * pageSize;
+        const paginated = _(allMedicine).slice(startIndex).take(pageSize).value();
+        setPaginatedPost(paginated);
+    }
+
 
     const handleSearch = (e) => {
         e.preventDefault();
@@ -31,6 +59,8 @@ const ManageMedicine = () => {
             method: 'DELETE'
         })
             .then(res => res.json())
+        const remaining = paginatedPost.filter(data => data._id !== id);
+        setPaginatedPost(remaining);
     }
 
     const setEdit = (id) => {
@@ -67,7 +97,7 @@ const ManageMedicine = () => {
                     </thead>
                     <tbody>
                         {
-                            allMedicine.map(data =>
+                            paginatedPost.map(data =>
                                 data.quantity < 5 ?
                                     <tr key={data._id} style={{ color: "red" }}>
                                         <td data-label="Brand Name">{data.brandName}</td>
@@ -97,6 +127,22 @@ const ManageMedicine = () => {
                     </tbody>
                 </table>
             </div>
+            <nav className="d-flex justify-content-center">
+                <ul className="pagination">
+                    {
+                        pages.map(page =>
+                            <li key={page} className={
+                                page === currentPage ? "page-item active" : "page-item"
+                            }>
+                                <p
+                                    onClick={() => Pagination(page)}
+                                    className="page-link pointer">{page}
+                                </p>
+                            </li>
+                        )
+                    }
+                </ul>
+            </nav>
         </div >
     );
 };

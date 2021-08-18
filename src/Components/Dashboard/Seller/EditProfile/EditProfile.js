@@ -60,11 +60,11 @@ const EditProfile = () => {
     }
 
     return (
-        <div id="background">
+        <div id="bg">
             <UserSideBar></UserSideBar>
 
             <div className="pt-4 mt-5 pb-4">
-                <div className="mx-auto card card_login pb-5 mt-5 position-static" style={{ width: "18rem" }}>
+                <div className="mx-auto card card_login pb-5 mt-5 position-static form-style">
                     <form id="form-div" onSubmit={handleEdit}>
                         <h5 className="pt-4 text-center font-weight-bold pb-3">Edit Profile<span><IoIcons.IoMdPeople /></span></h5>
                         <input className="form-control" type="email" name="email" defaultValue={store.email} readOnly />

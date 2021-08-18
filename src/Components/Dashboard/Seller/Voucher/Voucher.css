@@ -29,7 +29,7 @@ body {
 }
 
 #voucher_table tr {
-    background-color: white;
+    background-color: rgb(190, 198, 235);
     border: 1px solid #ddd;
     padding: .35em;
 }
@@ -41,7 +41,7 @@ body {
 }
 
 #voucher_table th {
-    background-color: white;
+    background-color: rgb(190, 198, 235);
     color: black;
     font-size: .85em;
     letter-spacing: .1em;

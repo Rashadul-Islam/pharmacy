@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import UserSideBar from '../../SideBar/UserSideBar';
+import "./Report.css";
 
 const Report = () => {
 
@@ -60,7 +61,6 @@ const Report = () => {
 
 
     function printReport() {
-        document.title = 'report.pdf';
         window.print();
     }
 
@@ -71,22 +71,22 @@ const Report = () => {
                 <div id="report">
                     <h3 className="text-center"><strong>Sells Report</strong></h3>
                     <form id="form-div" onSubmit={handleSubmit}>
-                        <div className="row">
-                            <div className="form-group col-md-5 pb-3">
+                        <div className="form-style mx-auto">
+                            <div className="form-group pb-3">
                                 <label>From</label>
                                 <input type="date" id="start" onClick={minDate} onBlur={handleBlur} name="start" className="form-control" required />
                             </div>
-                            <div className="form-group col-md-5 pb-3">
+                            <div className="form-group pb-3">
                                 <label>To</label>
                                 <input type="date" id="end" onClick={maxDate} onBlur={handleBlur} name="end" className="form-control" required />
                             </div>
-                            <div className="form-group col-md-2 pb-3 pt-3">
+                            <div className="form-group pb-3 pt-3">
                                 <button className="btn btn-primary w-100" type="submit">Generate</button>
                             </div>
                         </div>
                     </form>
                 </div>
-                <div id="record" style={{ display: "none" }}>
+                <div id="record">
                     <div id="print">
                         <div className="text-center">
                             <h5><strong>NEW LIFE MEDICINE</strong></h5>
@@ -97,7 +97,7 @@ const Report = () => {
                                 <p>Date: {date()}</p>
                             </div>
                         </div>
-                        <table id='voucher_table'>
+                        <table id='report_table'>
                             <thead>
                                 <tr>
                                     <th scope="col">Date</th>

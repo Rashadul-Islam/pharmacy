@@ -19,7 +19,6 @@ const Voucher = () => {
     }
 
     function printFunction() {
-        document.title = 'voucher.pdf';
         window.print();
     }
 
