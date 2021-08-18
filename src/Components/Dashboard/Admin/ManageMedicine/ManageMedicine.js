@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import UserSideBar from '../../SideBar/UserSideBar';
 import * as FaIcons from 'react-icons/fa';
-import "./ManageMedicine.css";
 import { useHistory } from 'react-router-dom';
 import _ from "lodash";
+import "./ManageMedicine.css";
 
 const ManageMedicine = () => {
 
@@ -136,7 +136,7 @@ const ManageMedicine = () => {
                             }>
                                 <p
                                     onClick={() => Pagination(page)}
-                                    className="page-link pointer">{page}
+                                    className="page-link point">{page}
                                 </p>
                             </li>
                         )
