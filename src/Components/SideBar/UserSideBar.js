@@ -6,7 +6,7 @@ import './UserSideBar.css';
 import { IconContext } from 'react-icons';
 import { AdminSideBarData } from './AdminSideBarData';
 import { SellerSideBarData } from './SellerSideBarData';
-import { UserContext } from '../../../App';
+import { UserContext } from '../../App';
 const UserSideBar = () => {
 
     const history = useHistory();

@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import UserSideBar from '../../SideBar/UserSideBar';
 import * as FaIcons from 'react-icons/fa';
 import { useHistory } from 'react-router-dom';
-import { UserContext2, UserContext3 } from '../../../../App';
+import { UserContext2, UserContext3 } from '../../../App';
 
 const SellMedicine = () => {
 

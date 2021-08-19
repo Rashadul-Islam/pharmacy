@@ -26,7 +26,13 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 480px {
+@media only screen and (min-width:769px)  {
+    .responsive {
+        width: 60%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
     .responsive {
         margin-top: 8%;
         padding-top: 0;

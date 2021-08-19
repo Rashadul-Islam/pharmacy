@@ -39,7 +39,7 @@ table th {
     text-transform: uppercase;
 }
 
-.point {
+.point:hover {
     cursor: pointer;
 }
 
