@@ -43,14 +43,15 @@ const SearchResult = () => {
         <div id="background">
             <UserSideBar></UserSideBar>
 
-            <form onSubmit={handleSearch}><div className="input-group pt-5 d-flex justify-content-center position-static">
-                <div className="form-outline">
-                    <input type="text" id="searchValue" className="form-control" placeholder="search" required />
+            <form onSubmit={handleSearch}>
+                <div className="input-group pt-5 d-flex justify-content-center position-static">
+                    <div className="form-outline">
+                        <input type="text" id="searchValue" className="form-control" placeholder="search" required />
+                    </div>
+                    <button type="submit" className="btn btn-primary">
+                        <FaIcons.FaSearch />
+                    </button>
                 </div>
-                <button type="submit" className="btn btn-primary">
-                    <FaIcons.FaSearch />
-                </button>
-            </div>
             </form>
             <div className="pt-3">
                 <table>

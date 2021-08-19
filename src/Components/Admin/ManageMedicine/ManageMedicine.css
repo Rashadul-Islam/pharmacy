@@ -43,6 +43,11 @@ table th {
     cursor: pointer;
 }
 
+.input-group .btn {
+    z-index: auto;
+    position: static;
+}
+
 @media screen and (max-width: 600px) {
     table {
         border: 0;

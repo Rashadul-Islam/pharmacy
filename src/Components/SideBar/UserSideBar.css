@@ -7,7 +7,9 @@
 }
 
 .menu-bars {
-    margin-left: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin-left: 0.8rem;
     font-size: 2rem;
     background: none;
 }
@@ -33,7 +35,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 8px 0px 8px 16px;
+    padding: 8px 0px 8px 0px;
     list-style: none;
     height: 60px;
 }

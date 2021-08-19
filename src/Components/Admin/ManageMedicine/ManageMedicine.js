@@ -71,14 +71,15 @@ const ManageMedicine = () => {
     return (
         <div id="background">
             <UserSideBar></UserSideBar>
-            <form onSubmit={handleSearch}><div className="input-group pt-2 d-flex justify-content-center position-static pt-5">
-                <div className="form-outline">
-                    <input type="text" id="searchValue" className="form-control" placeholder="search" required />
+            <form onSubmit={handleSearch}>
+                <div className="input-group d-flex justify-content-center position-static pt-4">
+                    <div className="form-outline">
+                        <input type="text" id="searchValue" className="form-control" placeholder="search" required />
+                    </div>
+                    <button type="submit" className="btn btn-primary">
+                        <FaIcons.FaSearch />
+                    </button>
                 </div>
-                <button type="submit" className="btn btn-primary">
-                    <FaIcons.FaSearch />
-                </button>
-            </div>
             </form>
             <div className="pt-3">
                 <table>
