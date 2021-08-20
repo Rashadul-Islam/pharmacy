@@ -25,4 +25,8 @@ Password: password
 
 For Seller:<br/>
 Email: seller@gmail.com<br/>
+<<<<<<< HEAD
 Password: sellerpass
+=======
+Password: sellerpass
+>>>>>>> 722ee005df346818899315cbcf14d28c8258edae
