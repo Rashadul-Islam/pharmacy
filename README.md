@@ -20,9 +20,9 @@ Technology Used: React, Bootstrap, CSS, MongoDB, Express JS, Firebase and React 
 Login Credential:
 
 For Admin
-Email: admin@gmail.com
+Email: admin@gmail.com<br/>
 Password: password
 
 For Seller:
-Email: seller@gmail.com
+Email: seller@gmail.com<br/>
 Password: sellerpass
