@@ -1,7 +1,7 @@
 <h1>Pharmacy Management System</h1>
 
 
-Live-Site: [Link](https://newlifepharma.web.app/)
+Live-Site: [Link](https://newlifepharma.web.app/)<br/>
 Server: [Link](https://github.com/Rashadul-Islam/pharma_server)
 
 Features:
