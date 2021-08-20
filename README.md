@@ -1,7 +1,7 @@
 <h1>Pharmacy Management System</h1>
 
 
-Live-Site: [Link](https://newlifepharma.web.app/)<br/>
+Live-Site: [Link](https://newlifepharma.netlify.app/)<br/>
 Server: [Link](https://github.com/Rashadul-Islam/pharma_server)
 
 Features:
@@ -25,8 +25,4 @@ Password: password
 
 For Seller:<br/>
 Email: seller@gmail.com<br/>
-<<<<<<< HEAD
 Password: sellerpass
-=======
-Password: sellerpass
->>>>>>> 722ee005df346818899315cbcf14d28c8258edae
