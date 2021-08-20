@@ -1,7 +1,7 @@
 <h1>Pharmacy Management System</h1>
 
 
-Live-Site: [Link](https://newlifepharma.web.app/)
+Live-Site: [Link](https://newlifepharma.web.app/)<br/>
 Server: [Link](https://github.com/Rashadul-Islam/pharma_server)
 
 Features:
@@ -19,10 +19,10 @@ Technology Used: React, Bootstrap, CSS, MongoDB, Express JS, Firebase and React 
 
 Login Credential:
 
-For Admin
-Email: admin@gmail.com
+For Admin:<br/>
+Email: admin@gmail.com<br/>
 Password: password
 
-For Seller:
-Email: seller@gmail.com
+For Seller:<br/>
+Email: seller@gmail.com<br/>
 Password: sellerpass
