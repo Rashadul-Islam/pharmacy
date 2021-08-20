@@ -49,8 +49,8 @@ const AdminHome = () => {
             profitTotal += sells[i].totalProfit;
         }
         return ({
-            sell: sellTotal,
-            profit: profitTotal
+            sell: parseFloat(sellTotal.toFixed(2)),
+            profit: parseFloat(profitTotal.toFixed(2))
         })
     }
 
@@ -67,27 +67,31 @@ const AdminHome = () => {
         <div id="background">
             <UserSideBar></UserSideBar>
             <div className="d-flex justify-content-center align-items-center row mx-auto responsive">
-                <div onClick={() => handleClick('manageMember')} className=" cursor card card_login d-flex justify-content-center align-items-center col-md-4 position-static p-4 m-4" style={{ width: '12rem' }}>
+                <div onClick={() => handleClick('manageMember')} className=" cursor card card_login d-flex justify-content-center align-items-center col-md-4 position-static p-4 m-4" style={{ width: '12rem', height: '11rem' }}>
                     <h1><FaIcons.FaUsers /></h1>
-                    <p><strong>Total User: {user.length}</strong></p>
+                    <p><strong>Total User</strong></p>
+                    <p><strong>{user.length}</strong></p>
                 </div>
-                <div onClick={() => handleClick('manageMedicine')} className=" cursor card card_login d-flex justify-content-center align-items-center col-md-4 position-static p-4 m-4" style={{ width: '12rem' }}>
+                <div onClick={() => handleClick('manageMedicine')} className=" cursor card card_login d-flex justify-content-center align-items-center col-md-4 position-static p-4 m-4" style={{ width: '12rem', height: '11rem' }}>
                     <h1><FaIcons.FaCapsules /></h1>
-                    <p><strong>Total Medicine: {allMedicine.length}</strong></p>
+                    <p><strong>Total Medicine</strong></p>
+                    <p><strong>{allMedicine.length}</strong></p>
                 </div>
-                <div onClick={() => handleClick('report')} className="cursor card card_login d-flex justify-content-center align-items-center col-md-4 position-static p-4 m-4" style={{ width: '12rem' }}>
+                <div onClick={() => handleClick('report')} className="cursor card card_login d-flex justify-content-center align-items-center col-md-4 position-static p-4 m-4" style={{ width: '12rem', height: '11rem' }}>
                     <h1><FaIcons.FaFilePdf /></h1>
                     <p><strong>Generate Report</strong></p>
                 </div>
-                <div className="card card_login d-flex justify-content-center align-items-center col-md-4 position-static p-4 m-4" style={{ width: '12rem' }}>
+                <div className="card card_login d-flex justify-content-center align-items-center col-md-4 position-static p-4 m-4" style={{ width: '12rem', height: '11rem' }}>
                     <h1><FaIcons.FaMoneyBillAlt /></h1>
-                    <p><strong>Sells Today: {total().sell}৳</strong></p>
+                    <p><strong>Sells Today</strong></p>
+                    <p><strong>{total().sell}৳</strong></p>
                 </div>
-                <div className="card card_login d-flex justify-content-center align-items-center col-md-4 position-static p-4 m-4" style={{ width: '12rem' }}>
+                <div className="card card_login d-flex justify-content-center align-items-center col-md-4 position-static p-4 m-4" style={{ width: '12rem', height: '11rem' }}>
                     <h1><FaIcons.FaMoneyBillAlt /></h1>
-                    <p><strong>Profit Today: {total().profit}৳</strong></p>
+                    <p><strong>Profit Today</strong></p>
+                    <p><strong>{total().profit}৳</strong></p>
                 </div>
-                <div onClick={handleLogOut} className=" cursor card card_login d-flex justify-content-center align-items-center col-md-4 position-static p-4 m-4" style={{ width: '12rem' }}>
+                <div onClick={handleLogOut} className=" cursor card card_login d-flex justify-content-center align-items-center col-md-4 position-static p-4 m-4" style={{ width: '12rem', height: '11rem' }}>
                     <h1><FaIcons.FaPowerOff /></h1>
                     <p><strong>LogOut</strong></p>
                 </div>

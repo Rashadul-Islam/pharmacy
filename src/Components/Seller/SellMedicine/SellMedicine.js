@@ -114,13 +114,13 @@ const SellMedicine = () => {
             totalProfit += (data[i].sellingPrice * data[i].sellQuantity) - (data[i].originalPrice * data[i].sellQuantity);
         }
         setTotal({
-            totalSell: totalSell,
-            totalProfit: totalProfit
+            totalSell: parseFloat(totalSell.toFixed(2)),
+            totalProfit: parseFloat(totalProfit.toFixed(2))
         })
         setConTextMedicine(data);
         setConTextTotal({
-            totalSell: totalSell,
-            totalProfit: totalProfit
+            totalSell: parseFloat(totalSell.toFixed(2)),
+            totalProfit: parseFloat(totalProfit.toFixed(2))
         });
     }
 
@@ -221,8 +221,8 @@ const SellMedicine = () => {
                                     <td data-label="Description">{data.description}</td>
                                     <td data-label="Selling Price">{data.sellingPrice}</td>
                                     <td data-label="Quantity">{data.sellQuantity}</td>
-                                    <td data-label="Amount">{data.sellingPrice * data.sellQuantity}</td>
-                                    <td data-label="Profit">{(data.sellingPrice * data.sellQuantity) - (data.originalPrice * data.sellQuantity)}</td>
+                                    <td data-label="Amount">{parseFloat((data.sellingPrice * data.sellQuantity).toFixed(2))}</td>
+                                    <td data-label="Profit">{parseFloat(((data.sellingPrice * data.sellQuantity) - (data.originalPrice * data.sellQuantity)).toFixed(2))}</td>
                                     <td data-label="Action" style={{ cursor: "pointer" }} onClick={() => handleDelete(data._id)}><FaIcons.FaTrashAlt /></td>
                                 </tr>)
                         }

@@ -54,8 +54,8 @@ const Report = () => {
             profitTotal += data[i].totalProfit;
         }
         return ({
-            sell: sellTotal,
-            profit: profitTotal
+            sell: parseFloat(sellTotal.toFixed(2)),
+            profit: parseFloat(profitTotal.toFixed(2))
         })
     }
 

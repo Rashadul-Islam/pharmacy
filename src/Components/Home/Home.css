@@ -4,3 +4,28 @@
     width: 100%;
     min-height: 100vh;
 }
+
+.homepage {
+    padding-top: 5%;
+    width: 75%;
+}
+
+@media (min-width: 1281px) {
+    .homepage {
+        padding-top: 5%;
+        width: 60%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .homepage {
+        padding-top: 5%;
+        width: 60%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .homepage {
+        padding-top: 5%;
+    }
+}
