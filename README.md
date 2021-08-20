@@ -19,7 +19,7 @@ Technology Used: React, Bootstrap, CSS, MongoDB, Express JS, Firebase and React 
 
 Login Credential:
 
-For Admin<br/>
+For Admin:<br/>
 Email: admin@gmail.com<br/>
 Password: password
 
